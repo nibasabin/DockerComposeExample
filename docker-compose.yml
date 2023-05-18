@@ -1,0 +1,9 @@
+version: "1"
+services:
+  frontend-service:
+    build: frontend-service/my-app
+    depends_on: ['backend-service']
+    ports: ["3000:3000"]
+
+  backend-service:
+    build: backend-service
